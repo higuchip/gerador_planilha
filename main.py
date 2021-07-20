@@ -94,7 +94,7 @@ st.write(
     "Desenvolvido por ***Pedro Higuchi***. Em caso de dúvidas ou outras informações entre em [contato] (https://www.linkedin.com/in/pedro-higuchi-4085a81b/)."
 )
 st.write(
-    "Observação: Funcionalidade em teste para ser posteriormente ser incorporado no ***Sistema de Gerenciamento "
+    "Observação: Funcionalidade em teste para posteriormente ser incorporado no ***Sistema de Gerenciamento "
     "de Dados de Inventários de Florestas Nativa***, em desenvolvimento."
 )
 
