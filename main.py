@@ -9,17 +9,22 @@ from reportlab.lib.units import inch
 from reportlab.lib import colors
 import streamlit as st
 
-st.title("Gerador de Planilha de Campo para Inventários Florestais")
+st.title("Gerador de Planilhas de Campo para Inventários Florestais 📝")
 
 st.write(
-    "Planilhas de campo são obrigatórias no check-list para a realização de inventários"
+    "Planilhas de campo são itens obrigatórios no check-list para a realização de inventários "
     "florestais. Por mais simples que seja a sua preparação, os contratempos podem ser vários, como uma eventual "
     "necessidade de urgência e a perda/corrompimento do arquivo no computador."
 )
 
 st.write(
-    "Após o preenchimento das informações abaixo, clique em 'Download' "
-    "para obtenção de sua planilha de campo padronzida"
+    "Tendo em vista a praticidade e agilidade de um processo automatizado, aqui apresento um Gerador de Planilhas de "
+    "Campo padronizadas. Após o preenchimento das informações abaixo, clique em 'Download' "
+    "para obtenção de seu arquivo no formato PDF pronto para impressão."
+)
+
+st.write(
+
 )
 
 
@@ -30,7 +35,7 @@ st.write("### 2) Indicação da Área")
 AREA = st.text_input("Digite o nome ou código da área onde será realizado o inventário florestal:")
 
 st.write("### 3) Definição do tamanho da planilha")
-N_ARV = st.number_input("Insira o número de árvores que potencialmente serão medidas", min_value=0, step=1)
+N_ARV = st.number_input("Insira o número de árvores que potencialmente serão medidas:", min_value=0, step=1)
 
 #Geração do PDF
 
@@ -51,7 +56,7 @@ def header(canvas, pdf):
     canvas.drawRightString(530, 30, text)
 
 
-pdf = BaseDocTemplate('planilha_campo_1.pdf', pagesize=A4)
+pdf = BaseDocTemplate('planilha_campo.pdf', pagesize=A4)
 frame = Frame(
     pdf.leftMargin - inch * 0.5,
     pdf.bottomMargin,
@@ -61,7 +66,7 @@ frame = Frame(
 template = PageTemplate(id='all_pages', frames=frame, onPage=header)
 pdf.addPageTemplates([template])
 # Data for table
-data = [["P", "n", "Espécie", "CAP", "h", "Obs"]]
+data = [["Parc.", "Núm.", "Espécie", "CAP/DAP", "Alt.", "Obs"]]
 data.extend([[" ", " ", ' ', " ", ' ', ' '] for i in range(N_ARV)])
 # Styles for table
 table_style = TableStyle([('GRID', (0, 0), (-1, -1), 0.25, colors.gray),
@@ -83,10 +88,14 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
 
 
 st.write("### 4) Baixar o arquivo PDF da planilha")
-st.markdown(get_binary_file_downloader_html('planilha_campo_1.pdf', 'Planilha'), unsafe_allow_html=True)
+st.markdown(get_binary_file_downloader_html('planilha_campo.pdf', 'Planilha'), unsafe_allow_html=True)
 st.write("### Contato:")
 st.write(
-    "Desenvolvido por Pedro Higuchi. Em caso de dúvidas ou outras informações entre em [contato] (https://www.linkedin.com/in/pedro-higuchi-4085a81b/)."
+    "Desenvolvido por ***Pedro Higuchi***. Em caso de dúvidas ou outras informações entre em [contato] (https://www.linkedin.com/in/pedro-higuchi-4085a81b/)."
+)
+st.write(
+    "Observação: Funcionalidade em teste para ser posteriormente ser incorporado no ***Sistema de Gerenciamento "
+    "de Dados de Inventários de Florestas Nativa***, em desenvolvimento."
 )
 
 
