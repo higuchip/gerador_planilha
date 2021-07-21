@@ -95,7 +95,7 @@ st.write(
 )
 st.write(
     "Observação: Funcionalidade em teste para posteriormente ser incorporado no ***Sistema de Gerenciamento "
-    "de Dados de Inventários de Florestas Nativa***, em desenvolvimento."
+    "de Dados de Inventários de Florestas Nativas***, em desenvolvimento."
 )
 
 
