@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 reportlab = "*"
 streamlit = "*"
+pandas = "*"
+pillow = "*"
+image = "*"
 
 [dev-packages]
 
