@@ -326,7 +326,7 @@ Este gerador faz parte de um **Sistema de Gerenciamento de Dados de Inventários
 
 ## 📈 Estatísticas do Projeto
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/higuchi/gerador_planilha
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/higuchip/gerador_planilha)
 ![GitHub contributors](https://img.shields.io/github/contributors/higuchip/gerador_planilha)
 ![GitHub issues](https://img.shields.io/github/issues/higuchip/gerador_planilha)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/higuchip/gerador_planilha)
