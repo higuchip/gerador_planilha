@@ -4,6 +4,10 @@
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![ReportLab](https://img.shields.io/badge/ReportLab-PDF%20Generation-orange.svg)
+![GitHub stars](https://img.shields.io/github/stars/higuchip/gerador_planilha)
+![GitHub last commit](https://img.shields.io/github/last-commit/higuchip/gerador_planilha)
+![GitHub repo size](https://img.shields.io/github/repo-size/higuchip/gerador_planilha)
+
 
 **Aplicação web para geração automatizada de planilhas de campo padronizadas para inventários florestais**
 
