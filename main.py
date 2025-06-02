@@ -20,8 +20,8 @@ logger = logging.getLogger(__name__)
 
 # Configurações de segurança
 MAX_INPUT_LENGTH = 100
-MAX_TREES = 1000
-ALLOWED_CHARS = re.compile(r'^[a-zA-Z0-9\s\-_.áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ]+$')
+MAX_TREES = 2000
+ALLOWED_CHARS = re.compile(r'^[a-zA-Z0-9\s\-_.áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ]+
 
 def sanitize_input(text, max_length=MAX_INPUT_LENGTH):
     """Sanitiza entrada do usuário"""
@@ -173,16 +173,6 @@ Tendo em vista a praticidade e agilidade de um processo automatizado, aqui apres
 Campo** padronizadas. Após o preenchimento das informações abaixo, clique em 'Gerar PDF' 
 para obtenção de seu arquivo pronto para impressão.
 """)
-
-# Sidebar com informações de segurança
-with st.sidebar:
-    st.markdown("### 🔒 Limites de Segurança")
-    st.info(f"""
-    📝 **Caracteres máx**: {MAX_INPUT_LENGTH}  
-    🌳 **Árvores máx**: {MAX_TREES}  
-    🛡️ **Caracteres especiais**: Removidos automaticamente  
-    🗂️ **Arquivos temporários**: Limpos automaticamente
-    """)
 
 st.markdown("---")
 
