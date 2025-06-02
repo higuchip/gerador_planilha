@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Configurações de segurança
 MAX_INPUT_LENGTH = 100
 MAX_TREES = 2000
-ALLOWED_CHARS = re.compile(r'^[a-zA-Z0-9\s\-_.áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ]+
+ALLOWED_CHARS = re.compile(r'^[a-zA-Z0-9\s\-_.áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ]+$')
 
 def sanitize_input(text, max_length=MAX_INPUT_LENGTH):
     """Sanitiza entrada do usuário"""
